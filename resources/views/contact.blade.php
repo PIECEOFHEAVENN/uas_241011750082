@@ -1,0 +1,7 @@
+@extends('layouts.frontend')
+
+@section('title', 'Kontak')
+
+@section('content')
+<section class="py-5" style="padding-top:100px!important;"><div class="container"><div class="text-center mb-5"><h1 class="section-title">Hubungi <span class="highlight">Kami</span></h1></div><div class="row g-4"><div class="col-md-4"><div class="card border-0 shadow-sm text-center p-4"><div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3"><i class="bi bi-geo-alt fs-2 text-primary"></i></div><h5>Alamat</h5><p class="text-muted"> Jl. Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan, Banten 15310</p></div></div><div class="col-md-4"><div class="card border-0 shadow-sm text-center p-4"><div class="bg-success bg-opacity-10 p-3 rounded-circle d-inline-block mb-3"><i class="bi bi-envelope fs-2 text-success"></i></div><h5>Email</h5><p class="text-muted">info@ekstrakurikuler.com</p></div></div><div class="col-md-4"><div class="card border-0 shadow-sm text-center p-4"><div class="bg-info bg-opacity-10 p-3 rounded-circle d-inline-block mb-3"><i class="bi bi-telephone fs-2 text-info"></i></div><h5>Telepon</h5><p class="text-muted">(021) 1234-5678</p></div></div></div></div></section>
+@endsection

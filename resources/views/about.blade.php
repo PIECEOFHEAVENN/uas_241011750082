@@ -1,0 +1,7 @@
+@extends('layouts.frontend')
+
+@section('title', 'Tentang')
+
+@section('content')
+<section class="py-5" style="padding-top:100px!important;"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1 class="section-title">Tentang <span class="highlight">EkstraKurikuler</span></h1><p class="mt-4">EkstraKurikuler adalah platform informasi kegiatan ekstrakurikuler yang bertujuan membantu siswa menemukan dan mengikuti kegiatan yang sesuai dengan minat dan bakat mereka.</p><div class="row mt-4"><div class="col-6"><div class="d-flex align-items-center"><div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3"><i class="bi bi-people text-primary fs-4"></i></div><div><h6 class="mb-0">Siswa</h6><small>Aktif & Kreatif</small></div></div></div><div class="col-6"><div class="d-flex align-items-center"><div class="bg-success bg-opacity-10 p-3 rounded-circle me-3"><i class="bi bi-award text-success fs-4"></i></div><div><h6 class="mb-0">Prestasi</h6><small>Berkembang</small></div></div></div></div></div><div class="col-lg-6 text-center mt-5 mt-lg-0"><div class="bg-white rounded-4 p-5 shadow-sm"><div style="width:200px;height:200px;background:linear-gradient(135deg,#2c3e50,#3498db);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;"><i class="bi bi-calendar-event display-1 text-white"></i></div><h4 class="mt-3">EkstraKurikuler</h4></div></div></div></div></section>
+@endsection
