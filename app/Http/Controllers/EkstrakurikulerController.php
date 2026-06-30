@@ -65,14 +65,12 @@ class EkstrakurikulerController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('gambar')) {
-            if ($ekstrakurikuler->gambar) {
-                Storage::disk('public')->delete($ekstrakurikuler->gambar);
-            }
-            $gambarPath = $request->file('gambar')->store('ekstrakurikuler', 'public');
-            $data['gambar'] = $gambarPath;
+       if ($request->hasFile('gambar')) {
+            $file = $request->file('gambar');
+            $namaFile = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/ekstrakurikuler'), $namaFile);
+            $data['gambar'] = 'uploads/ekstrakurikuler/' . $namaFile;
         }
-
         $ekstrakurikuler->update($data);
 
         return redirect()->route('ekstrakurikuler.index')
