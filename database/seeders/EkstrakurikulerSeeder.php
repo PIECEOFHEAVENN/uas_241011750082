@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 class EkstrakurikulerSeeder extends Seeder
 {
@@ -14,10 +12,10 @@ class EkstrakurikulerSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('ekstrakurikuler')->insert([
+        $items = [
             [
                 'id_kegiatan' => 'EKS001',
-                'gambar' => null,
+                'gambar' => 'uploads/ekstrakurikuler/basket.jpg',
                 'nama_kegiatan' => 'Basket',
                 'hari' => 'Senin',
                 'waktu' => '15:00 - 17:00',
@@ -27,7 +25,7 @@ class EkstrakurikulerSeeder extends Seeder
             ],
             [
                 'id_kegiatan' => 'EKS002',
-                'gambar' => null,
+                'gambar' => 'uploads/ekstrakurikuler/futsal.jpg',
                 'nama_kegiatan' => 'Futsal',
                 'hari' => 'Rabu',
                 'waktu' => '15:30 - 17:30',
@@ -37,7 +35,7 @@ class EkstrakurikulerSeeder extends Seeder
             ],
             [
                 'id_kegiatan' => 'EKS003',
-                'gambar' => null,
+                'gambar' => 'uploads/ekstrakurikuler/badminton.jpg',
                 'nama_kegiatan' => 'Badminton',
                 'hari' => 'Jumat',
                 'waktu' => '14:00 - 16:00',
@@ -45,6 +43,13 @@ class EkstrakurikulerSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-        ]);
-}
+        ];
+
+        foreach ($items as $item) {
+            DB::table('ekstrakurikuler')->updateOrInsert(
+                ['id_kegiatan' => $item['id_kegiatan']],
+                $item
+            );
+        }
+    }
 }
