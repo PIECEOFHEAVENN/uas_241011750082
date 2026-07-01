@@ -11,6 +11,16 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+## Run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+Open the application at [http://localhost:8000](http://localhost:8000). Vite runs on [http://localhost:5173](http://localhost:5173).
+
+The Compose setup uses the existing SQLite configuration in `.env`. On first run it installs Composer and npm dependencies, creates `database/database.sqlite` when missing, generates `APP_KEY` when empty, and runs migrations.
+
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
