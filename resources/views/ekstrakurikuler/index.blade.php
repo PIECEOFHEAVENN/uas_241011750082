@@ -14,7 +14,7 @@
             <table class="table table-hover">
                 <thead><tr><th>ID</th><th>Gambar</th><th>Nama Kegiatan</th><th>Hari</th><th>Waktu</th><th>Pembina</th><th>Aksi</th></tr></thead>
                 <tbody>@foreach($ekstrakurikuler as $item)<tr><td>{{ $item->id_kegiatan }}</td>
-                    <td>@if($item->gambar)<img src="{{ asset('storage/'.$item->gambar) }}" width="50" height="50" style="object-fit:cover;border-radius:8px;">@else<i class="bi bi-image text-muted fs-2"></i>@endif</td>
+                    <td>@if($item->gambar)<img src="{{ asset($item->gambar) }}" width="50" height="50" style="object-fit:cover;border-radius:8px;">@else<i class="bi bi-image text-muted fs-2"></i>@endif</td>
                     <td><strong>{{ $item->nama_kegiatan }}</strong></td>
                     <td>{{ $item->hari }}</td><td>{{ $item->waktu }}</td><td>{{ $item->pembina }}</td>
                     <td><div class="btn-group btn-group-sm"><a href="{{ route('ekstrakurikuler.show', $item->id) }}" class="btn btn-info text-white"><i class="bi bi-eye"></i></a><a href="{{ route('ekstrakurikuler.edit', $item->id) }}" class="btn btn-warning text-white"><i class="bi bi-pencil"></i></a><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $item->id }}"><i class="bi bi-trash"></i></button></div></td></tr>@endforeach</tbody>

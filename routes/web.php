@@ -12,6 +12,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/daftar-ekstrakurikuler', [HomeController::class, 'publicIndex'])->name('public.ekstrakurikuler');
+Route::get('/uploads/ekstrakurikuler/{filename}', [EkstrakurikulerController::class, 'image'])
+    ->where('filename', '[^/]+')
+    ->name('ekstrakurikuler.image');
 
 // Auth
 Route::middleware(['guest'])->group(function () {
